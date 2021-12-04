@@ -12,6 +12,8 @@ app.use(express.urlencoded({
     extended: true
 }))
 
+app.use('/auth', require('./routers/auth'))
+
 app.listen(process.env.SERVER_PORT, process.env.SERVER_HOST, () => {
     console.log(`Running on ${process.env.SERVER_HOST}:${process.env.SERVER_PORT}`)
 })
